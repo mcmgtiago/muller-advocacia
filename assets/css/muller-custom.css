@@ -1837,14 +1837,17 @@ input, textarea, select, [contenteditable] {
 @media (max-width: 767.98px) {
   .welcome4-section-area {
     align-items: flex-start !important;
-    padding-top: 75px !important;
-    padding-bottom: 450px !important;
+    padding: 0 0 450px 0 !important;
     background-image:
     /* ───   linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),─── */
       url('../images/muller/heromob.jpg') !important;
     background-size: cover !important;
     background-position: center bottom !important;
     background-repeat: no-repeat !important;
+  }
+  /* Container recebe o espaço do header fixo (~70px) */
+  .welcome4-section-area > .container {
+    padding-top: 70px !important;
   }
 
   /* Texto do hero centralizado */
