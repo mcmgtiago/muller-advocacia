@@ -1678,6 +1678,107 @@ a.shedule-btn2::before {
   .service4-boxarea5 { padding: 16px 10px !important; }
 }
 
+/* ─── Fixes adicionais mobile — seções específicas ─── */
+@media (max-width: 767.98px) {
+  /* Esconde elementor decorativos no mobile */
+  .elementor-22, img.elementor-22,
+  img.elementors72, img.elementors73,
+  img.elementor24, img.elementor25 { display: none !important; }
+
+  /* Hero: overlay mais escuro no mobile */
+  .welcome4-section-area {
+    background-image:
+      linear-gradient(rgba(6,6,6,0.91), rgba(6,6,6,0.91)),
+      url('../images/muller/herofundo.jpg') !important;
+  }
+
+  /* Service cards: 1 por linha no mobile */
+  .service-3-section-area .col-lg-3,
+  .service-3-section-area [class*="col-md-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .service4-boxarea5 { margin-bottom: 16px !important; }
+
+  /* Google Reviews: 1 por linha no mobile */
+  .gr-section .col-lg-4,
+  .gr-section [class*="col-md-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* About counters: 2 por linha no mobile (compacto) */
+  .about3-section-area .counter3-area3 [class*="col-md-"] {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+  }
+  .counter3-boxarea4 { padding: 16px 12px !important; }
+
+  /* Team: bio stacked */
+  .team-bio-actions {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .team-bio-actions a.theme6-btn6 {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Blog: imagens menores */
+  .blog5-imag5 { min-height: 180px !important; }
+  .blog5-imag5 img { height: 180px !important; }
+
+  /* Contact form: inputs full-width */
+  .input-5area input,
+  .input-5area textarea {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Footer: stack todas as colunas */
+  .footer4-section-area .col-lg-4 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  .footer4-section-area .col-lg-4 + .col-lg-4 { margin-top: 28px !important; }
+
+  /* Overflow-x: previne scroll lateral em qualquer seção */
+  section, .welcome4-section-area,
+  .about3-section-area, .service-3-section-area,
+  .client3-section-area, .team1-section-area,
+  .gr-section, .blog-5-section-area,
+  .contcat5-section-area, .footer4-section-area,
+  .cta5-section-area { overflow-x: hidden !important; }
+}
+
+/* ─── Ícone WhatsApp SVG nos botões ─── */
+.wa-btn-icon {
+  width: 1.15em;
+  height: 1.15em;
+  fill: currentColor;
+  vertical-align: middle;
+  display: inline-block;
+  flex-shrink: 0;
+  margin-right: 6px;
+  position: relative;
+  top: -1px;
+}
+
+/* ─── Proteção de conteúdo (user-select) ─── */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+input, textarea, select, [contenteditable] {
+  -webkit-user-select: text !important;
+  user-select: text !important;
+}
+
 /* ─── Crédito Velo.Law no rodapé ─── */
 .velo-credit-line {
   margin-top: 6px !important;
