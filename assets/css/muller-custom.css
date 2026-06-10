@@ -1828,8 +1828,8 @@ input, textarea, select, [contenteditable] {
 /* ─── Container padding lateral global no mobile ─── */
 @media (max-width: 767.98px) {
   .container {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
 }
 
@@ -1838,6 +1838,7 @@ input, textarea, select, [contenteditable] {
   .welcome4-section-area {
     align-items: flex-start !important;
     padding: 0 0 450px 0 !important;
+    min-height: 0 !important;
     background-image:
     /* ───   linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),─── */
       url('../images/muller/heromob.jpg') !important;
@@ -1845,9 +1846,17 @@ input, textarea, select, [contenteditable] {
     background-position: center bottom !important;
     background-repeat: no-repeat !important;
   }
-  /* Container recebe o espaço do header fixo (~70px) */
+  /* Texto do hero direto no topo — mais específico que o flex do pai */
+  .welcome4-section-area .welcome4-textarea {
+    padding-top: 85px !important;
+    margin-top: 0 !important;
+  }
   .welcome4-section-area > .container {
-    padding-top: 70px !important;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  .welcome4-section-area .row {
+    margin-top: 0 !important;
   }
 
   /* Texto do hero centralizado */
