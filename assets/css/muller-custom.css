@@ -1407,7 +1407,8 @@ html::before {
   width: auto !important;
   height: 100% !important;
   max-width: 100% !important;
-  max-height: 480px !important;
+  max-height: none !important;
+  min-height: 400px !important;
   object-fit: contain !important;
 }
 /* Hero image container fallback */
@@ -1838,7 +1839,7 @@ input, textarea, select, [contenteditable] {
     padding-top: 40px !important;
     padding-bottom: 450px !important;
     background-image:
-      linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),
+    /* ───   linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),─── */
       url('../images/muller/heromob.jpg') !important;
     background-size: cover !important;
     background-position: center bottom !important;
