@@ -1671,9 +1671,9 @@ a.shedule-btn2::before {
 
 /* ─── Telas muito pequenas (< 400px) ─── */
 @media (max-width: 399px) {
-  .font-60 { font-size: 26px !important; line-height: 34px !important; }
-  .font-48 { font-size: 22px !important; line-height: 30px !important; }
-  .font-40 { font-size: 20px !important; line-height: 28px !important; }
+  .font-60 { font-size: 30px !important; line-height: 38px !important; }
+  .font-48 { font-size: 26px !important; line-height: 34px !important; }
+  .font-40 { font-size: 22px !important; line-height: 30px !important; }
   span.trust { font-size: 11px !important; padding: 5px 10px !important; }
   .service4-boxarea5 { padding: 16px 10px !important; }
 }
@@ -1791,6 +1791,7 @@ input, textarea, select, [contenteditable] {
   display: inline-flex !important;
   align-items: center !important;
   gap: 4px !important;
+  margin-left: 5px !important;
   transition: color 0.2s ease !important;
 }
 .velo-credit-link:hover {
@@ -1806,4 +1807,179 @@ input, textarea, select, [contenteditable] {
 }
 .velo-credit-link:hover .velo-credit-svg {
   opacity: 1 !important;
+}
+
+/* ================================================================
+   MOBILE OVERRIDES v2 — Muller Advocacia
+   Fixes: logo, hero bg, text centering, image order, buttons,
+          container padding, titles, contact, footer
+   ================================================================ */
+
+/* ─── Logo mobile ─── */
+@media (max-width: 991.98px) {
+  .mobile-logo img,
+  .mobile-sidebar .logos img {
+    max-height: 40px !important;
+    width: auto !important;
+  }
+}
+
+/* ─── Container padding lateral global no mobile ─── */
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+/* ─── Hero mobile: imagem heromob.jpg + espaço 325px para advogado ─── */
+@media (max-width: 767.98px) {
+  .welcome4-section-area {
+    padding-bottom: 325px !important;
+    background-image:
+      linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),
+      url('../images/muller/heromob.jpg') !important;
+    background-size: cover !important;
+    background-position: center bottom !important;
+    background-repeat: no-repeat !important;
+  }
+
+  /* Texto do hero centralizado */
+  .welcome4-textarea,
+  .welcome4-textarea h1,
+  .welcome4-textarea p {
+    text-align: center !important;
+  }
+  .shecdule-btn1 {
+    text-align: center !important;
+  }
+
+  /* Títulos maiores */
+  .font-60 { font-size: 36px !important; line-height: 44px !important; }
+  .font-48 { font-size: 30px !important; line-height: 38px !important; }
+  .font-40 { font-size: 26px !important; line-height: 34px !important; }
+}
+
+/* ─── Sobre nós: conteúdo centralizado + 1 counter por linha ─── */
+@media (max-width: 767.98px) {
+  .about3-textarea1,
+  .about3-textarea1 h1,
+  .about3-textarea1 p,
+  .about3-textarea1 .about3span {
+    text-align: center !important;
+  }
+  .about3-textarea1 a.theme6-btn6 {
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  /* 1 counter por linha */
+  .about3-section-area .counter3-area3 [class*="col-md-"] {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* ─── Por que nos escolher: imagem primeiro, texto centralizado ─── */
+@media (max-width: 767.98px) {
+  /* Coluna da imagem (2ª no HTML) sobe para topo */
+  .client3-section-area .col-lg-6:last-child {
+    order: -1 !important;
+    margin-bottom: 28px !important;
+  }
+  /* Texto centralizado */
+  .client3-section-textarea,
+  .client3-section-textarea h1,
+  .client3-section-textarea p,
+  .client3-section-textarea .about3span {
+    text-align: center !important;
+  }
+}
+
+/* ─── Botões mobile maiores: 28px vertical × 50px horizontal ─── */
+@media (max-width: 767.98px) {
+  a.theme6-btn6,
+  a.shedule-btn2,
+  button.contcat5,
+  button.contcat6 {
+    padding: 28px 50px !important;
+    font-size: 15px !important;
+    min-height: auto !important;
+  }
+  /* Exceção: botão do header mobile não precisa de tanto padding */
+  .shecdule-btn1 a.shedule-btn2 {
+    padding: 14px 24px !important;
+  }
+}
+
+/* ─── Fale conosco: conteúdo centralizado ─── */
+@media (max-width: 767.98px) {
+  .contcat5-textarea5,
+  .contcat5-textarea5 h1,
+  .contcat5-textarea5 p,
+  .contcat5-textarea5 .about3span {
+    text-align: center !important;
+  }
+  .phone7-textarea {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  /* E-mail e textos longos: quebra de linha */
+  .phone7-text a,
+  .email4 a {
+    font-size: 14px !important;
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+  }
+  /* Contact section: empilha colunas */
+  .contcat5-section-area .col-lg-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+  .contcat5-section-area .col-lg-6:first-child {
+    margin-bottom: 32px !important;
+  }
+}
+
+/* ─── Footer: tudo centralizado ─── */
+@media (max-width: 767.98px) {
+  .footer4-section-area .col-lg-4 {
+    text-align: center !important;
+  }
+  .contact5-logo5-text {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .contact5-logo5-text img {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .icon-social-links ul {
+    justify-content: center !important;
+  }
+  .about-5-links ul {
+    padding: 0 !important;
+    text-align: center !important;
+  }
+  .about-5-links ul li { list-style: none !important; }
+  .contact-footer.heightleft {
+    text-align: center !important;
+  }
+  .email4,
+  .location-fooetr {
+    justify-content: center !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    flex-wrap: wrap !important;
+  }
+  .email4 a,
+  .location-fooetr a {
+    word-break: break-all !important;
+    overflow-wrap: break-word !important;
+    font-size: 13px !important;
+  }
+  .copyright6 { text-align: center !important; }
+  .copyright6 p { font-size: 12px !important; }
 }
