@@ -1832,10 +1832,11 @@ input, textarea, select, [contenteditable] {
   }
 }
 
-/* ─── Hero mobile: imagem heromob.jpg + espaço 325px para advogado ─── */
+/* ─── Hero mobile: imagem heromob.jpg + espaço 450px para advogado ─── */
 @media (max-width: 767.98px) {
   .welcome4-section-area {
-    padding-bottom: 325px !important;
+    padding-top: 100px !important;
+    padding-bottom: 450px !important;
     background-image:
       linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),
       url('../images/muller/heromob.jpg') !important;
