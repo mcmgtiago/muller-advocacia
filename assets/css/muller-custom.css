@@ -1836,7 +1836,8 @@ input, textarea, select, [contenteditable] {
 /* ─── Hero mobile: imagem heromob.jpg + espaço 450px para advogado ─── */
 @media (max-width: 767.98px) {
   .welcome4-section-area {
-    padding-top: 40px !important;
+    align-items: flex-start !important;
+    padding-top: 75px !important;
     padding-bottom: 450px !important;
     background-image:
     /* ───   linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),─── */
