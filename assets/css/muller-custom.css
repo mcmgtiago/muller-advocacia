@@ -1837,25 +1837,19 @@ input, textarea, select, [contenteditable] {
 @media (max-width: 767.98px) {
   .welcome4-section-area {
     align-items: flex-start !important;
-    padding: 0 0 450px 0 !important;
+    padding: 0 0 520px 0 !important;
     min-height: 0 !important;
-    background-image:
-    /* ───   linear-gradient(rgba(6,6,6,0.78), rgba(6,6,6,0.78)),─── */
-      url('../images/muller/heromob.jpg') !important;
+    background-image: url('../images/muller/heromob.jpg') !important;
     background-size: cover !important;
     background-position: center bottom !important;
     background-repeat: no-repeat !important;
   }
-  /* Texto do hero direto no topo — mais específico que o flex do pai */
   .welcome4-section-area .welcome4-textarea {
-    padding-top: 85px !important;
+    padding-top: 48px !important;
     margin-top: 0 !important;
   }
   .welcome4-section-area > .container {
     padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-  .welcome4-section-area .row {
     margin-top: 0 !important;
   }
 
